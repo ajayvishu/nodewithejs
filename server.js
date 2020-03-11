@@ -35,10 +35,10 @@ var  executeQuery = function(res, query){
             res.send(error_db);
         }
         else 
-		{
-             // Create Request object
+	{
+            // Create Request object
             var request = new sql.Request();
-             // Query to the database
+            // Query to the database
             request.query(query, function (error_query, res_data) {
                 if (error_query) {
                     console.log("Error while querying Database :- " + error_query);
@@ -47,9 +47,9 @@ var  executeQuery = function(res, query){
                 else {
                     console.table(res_data.recordset);
                     //res.send(res_data.recordset);
-					res.render('./pages/value.ejs', {
-						data: res_data.recordset
-					});  
+		     res.render('./pages/value.ejs', {
+		     data: res_data.recordset
+		     });  
                 }
             });
         }
