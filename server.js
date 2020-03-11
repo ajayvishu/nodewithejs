@@ -47,9 +47,9 @@ var  executeQuery = function(res, query){
                 else {
                     console.table(res_data.recordset);
                     //res.send(res_data.recordset);
-		     res.render('./pages/value.ejs', {
-		     data: res_data.recordset
-		     });  
+		    res.render('./pages/value.ejs', {
+		    data: res_data.recordset
+		    });  
                 }
             });
         }
